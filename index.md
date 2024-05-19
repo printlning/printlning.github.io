@@ -5,5 +5,4 @@ nav_order: 1
 permalink: /
 ---
 
-test
-한글
+🤗
