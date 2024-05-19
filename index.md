@@ -6,3 +6,4 @@ permalink: /
 ---
 
 test
+한글
