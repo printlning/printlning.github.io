@@ -15,6 +15,7 @@ nav_order: 1
 
 <br/>
 <br/>
+<br/>
 
 ![](https://i.imgur.com/VxIY6th.png)
 
@@ -36,8 +37,6 @@ nav_order: 1
 	이더넷 헤더는 source MAC, destination MAC 등의 정보를 담고 있습니다. 
 4. Data Link Layer -> Physical Layer
 	프레임을 비트로 변환 데이터를 전송합니다.
-
-<br/>
 
 위 단계를 역으로 수행한 것이 역캡슐화 과정입니다. 또한 여기서 메시지, 세그먼트, 패킷, 프레임은 각 계층의 데이터를 부르는 명칭이라고 생각하시면 됩니다. 
 
