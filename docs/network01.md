@@ -5,10 +5,11 @@ parent: Network
 nav_order: 1
 ---
 
-# 캡슐화와 역캡슐화
+# 캡슐화와 역캡슐화 - Encapsulation And Decapsulation
 ***
 
-![|380](https://i.imgur.com/dsN4Sik.png)
+
+![](https://i.imgur.com/dsN4Sik.png)
 
 인터넷에서 데이터를 주고 받을 때, 사실 데이터는 위와 같은 계층을 지납니다. 계층을 지나면서 데이터에 헤더를 붙이기도 하고 떼기도 하는데, 이것이 **캡슐화** 혹은 **역캡슐화**입니다.
 
