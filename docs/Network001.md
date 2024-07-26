@@ -8,8 +8,7 @@ nav_order: 1
 # 캡슐화와 역캡슐화
 ***
 <br/>
-
-![](https://i.imgur.com/dsN4Sik.png){: width="60%" height="60%"}
+![[internet_protocol_layer.png]]{: width="60%" height="60%"}
 
 인터넷에서 데이터를 주고 받을 때, 사실 데이터는 위와 같은 계층을 지납니다. 계층을 지나면서 데이터에 헤더를 붙이기도 하고 떼기도 하는데, 이것이 **캡슐화** 혹은 **역캡슐화**입니다.
 
@@ -17,7 +16,7 @@ nav_order: 1
 <br/>
 <br/>
 
-![](https://i.imgur.com/VxIY6th.png)
+![[capsulation.png]]
 
 
 데이터 송신(주황색) 과정에서는 헤더를 붙이면서 캡슐화를, 데이터 수신(연두색) 과정에서는 헤더를 떼면서 역캡슐화를 진행합니다.
