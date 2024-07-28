@@ -32,7 +32,7 @@ Kali Linux를 이용해 CentOS 7에 Ping of Death 공격을 해보겠습니다.
 <br/>
 <br/>
 
-![](../images/Network003_Ping%20of%20Death/pingofdeath01.png)
+![](../images/Network003/pingofdeath01.png)
 터미널에서 아래처럼 입력해 공격할 수 있습니다.
 ```shell
 hping3 --icmp -a 100.100.100.100 192.168.10.50 -d 65000 --flood
@@ -43,21 +43,21 @@ hping3 --icmp -a 100.100.100.100 192.168.10.50 -d 65000 --flood
 <br/>
 <br/>
 
-![](../images/Network003_Ping%20of%20Death/pingofdeath02.png)
+![](../images/Network003/pingofdeath02.png)
 공격 전 CentOS 7에서 미리 모니터를 실행해주면
 
 <br/>
 <br/>
 <br/>
 
-![](../images/Network003_Ping%20of%20Death/pingofdeath03.png)
+![](../images/Network003/pingofdeath03.png)
 공격을 받았을 때 네트워크 사용량이 급격하게 상승하는 것을 확인할 수 있습니다.
 
 <br/>
 <br/>
 <br/>
 
-![](../images/Network003_Ping%20of%20Death/pingofdeath04.png)
+![](../images/Network003/pingofdeath04.png)
 wireshark도 살펴볼까요?
 IP가 100.100.100.100으로 변조된 것을 확인할 수 있습니다. 
 또한 Info의 Fragmented IP protocol, proto=ICMP를 통해 분할된 ICMP 패킷을 받은 사실을 볼 수 있습니다. 
@@ -66,7 +66,7 @@ IP가 100.100.100.100으로 변조된 것을 확인할 수 있습니다.
 <br/>
 <br/>
 
-![](../images/Network003_Ping%20of%20Death/pingofdeath05.png)
+![](../images/Network003/pingofdeath05.png)
 SYN Flooding때와 마찬가지로 --rand-source 옵션도 사용할 수 있습니다.
 ```shell
 hping3 --icmp --rand-source 192.168.10.50 -d 65000 --flood
@@ -76,6 +76,6 @@ hping3 --icmp --rand-source 192.168.10.50 -d 65000 --flood
 <br/>
 <br/>
 
-![](../images/Network003_Ping%20of%20Death/pingofdeath06.png)
+![](../images/Network003/pingofdeath06.png)
 공격 후 wireshark에서 랜덤하게 변조된 IP를 확인해 보겠습니다.
 한 IP에서 패킷을 하나 보냈어도, 여러 개로 분할되어 전송되기 때문에 위와 같이 캡처된 것을 볼 수 있습니다.

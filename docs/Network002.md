@@ -14,7 +14,7 @@ SYN Flooding은 3-way handshake에서 취약점을 이용합니다. 이해를 �
 <br/>
 <br/>
 
-![](../images/Network002_SYN%20Flooding/3wayhandshake.png)
+![](../images/Network002/3wayhandshake.png)
 위 사진이 TCP 연결을 위한 3-way handshake 과정입니다.
 1. 클라이언트가 서버에게 접속을 요청하는 SYN을 보냅니다.
 2. Listen 상태인 서버가 SYN을 받고 ACK + SYN를 클라이언트에게 보냅니다. 앞서 보낸 SYN에 대한 ACK라 sequence number는 x+1이 됩니다.
@@ -45,7 +45,7 @@ Kali Linux를 이용해 CentOS 7에 SYN Flooding 공격을 해보겠습니다.
 <br/>
 <br/>
 
-![](../images/Network002_SYN%20Flooding/synflooding01.png)
+![](../images/Network002/synflooding01.png)
 Kali Linux 터미널에서 아래와 같이 입력해주세요.
 ```shell
 hping3 --rand-source 192.168.10.50 -S -p 80 --flood
@@ -56,21 +56,21 @@ hping3 --rand-source 192.168.10.50 -S -p 80 --flood
 <br/>
 <br/>
 
-![](../images/Network002_SYN%20Flooding/synflooding02.png)
+![](../images/Network002/synflooding02.png)
 CentOS 7을 보면 공격때문에 먹통이 된 것을 확인할 수 있습니다.
 
 <br/>
 <br/>
 <br/>
 
-![](../images/Network002_SYN%20Flooding/synflooding03.png)
+![](../images/Network002/synflooding03.png)
 공격을 받았을 때의 상황을 확인하기 위해 시스템 모니터를 띄워보겠습니다. CentOS 7에서 gnome-system-monitor를 실행해주세요.
 
 <br/>
 <br/>
 <br/>
 
-![](../images/Network002_SYN%20Flooding/synflooding04.png)
+![](../images/Network002/synflooding04.png)
 공격을 받기 전의 평화로운 상태입니다.
 
 <br/>
@@ -87,7 +87,7 @@ hping3 --rand-source 192.168.10.50 -S -p 80 --flood
 <br/>
 <br/>
 
-![](../images/Network002_SYN%20Flooding/synflooding05.png)
+![](../images/Network002/synflooding05.png)
 그리고 CentOS 7에 가서 모니터를 확인합니다. 공격을 받은 시점부터 네트워크 사용량이 올라간 것을 확인할 수 있습니다. 
 
 <br/>
@@ -103,7 +103,7 @@ netstat -tuna
 <br/>
 <br/>
 
-![](../images/Network002_SYN%20Flooding/synflooding06.png)
+![](../images/Network002/synflooding06.png)
 다양한 IP로부터 많은 SYN을 받은 것을 알 수 있습니다.
 
 <br/>
@@ -111,7 +111,7 @@ netstat -tuna
 <br/>
 
 Wireshark를 이용한 패킷 캡처도 살펴보겠습니다.
-![](../images/Network002_SYN%20Flooding/synflooding07.png)
+![](../images/Network002/synflooding07.png)
 netstat으로 확인했던 것과 동일하게 다양한 IP로부터 받은 SYN 패킷을 볼 수 있습니다. SYN Flooding공격이기 때문에 응답으로 ACK 패킷을 받지 못 한 것 또한 확인할 수 있습니다.
 
 <br/>
